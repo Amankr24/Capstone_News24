@@ -1,0 +1,33 @@
+<sly data-sly-use.trendingArticle="com.virtusa.capstone.core.models.TrendingArticle">
+   <div class="container-fluid pb-4 pt-5">
+      <div class="container animate-box fadeInUp animated-fast">
+         <div>
+            <div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4">Trending</div>
+         </div>
+         <div class="owl-carousel owl-theme owl-loaded owl-drag" id="slider2" data-sly-list.art="${trendingArticle.categoryArticles}">
+            <div class="item px-2">
+               <div class="fh5co_hover_news_img">
+                  <div class="fh5co_news_img">
+                     <img src="${art.bannerImage @context='uri'}" alt="" />
+                  </div>
+                  <div>
+                     <a href="#" class="d-block fh5co_small_post_heading">
+                     <span class="">${art.bannerText @context='html'}</span>
+                     </a>
+                     <div class="c_g"><i class="fa fa-clock-o"></i> ${art.pageCreatedDate}</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</sly>
+
+
+
+
+
+
+
+
+
